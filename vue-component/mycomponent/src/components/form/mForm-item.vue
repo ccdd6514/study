@@ -82,7 +82,6 @@ export default {
       validator.validate(model, { firstFields: true }, (errors) => {
         this.validateState = !errors ? "success" : "error";
         this.validateMessage = errors ? errors[0].message : "";
-
         callback(this.validateMessage);
       });
     },

@@ -32,7 +32,6 @@ export default {
       if (field) this.fields.push(field);
     });
     this.$on("on-form-item-remove", (field) => {
-      console.log(field, field.prop);
       if (field.prop) this.fields.splice(this.fields.indexOf(field), 1);
     });
   },
