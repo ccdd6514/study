@@ -16,6 +16,14 @@ const routes = [
     path: "/display",
     component: () => import("../views/mDisplay.vue"),
   },
+  {
+    path: "/alert",
+    component: () => import("../views/mAlert.vue"),
+  },
+  {
+    path: "/demoRender",
+    component: () => import("../views/demoRender.vue"),
+  },
 ];
 
 const router = new VueRouter({
