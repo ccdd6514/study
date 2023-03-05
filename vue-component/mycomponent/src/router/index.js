@@ -24,6 +24,30 @@ const routes = [
     path: "/demoRender",
     component: () => import("../views/demoRender.vue"),
   },
+  {
+    path: "/table-render",
+    component: () => import("../views/table-render.vue"),
+  },
+  {
+    path: "/table-render1",
+    component: () => import("../views/table-render1.vue"),
+  },
+  {
+    path: "/table-slot",
+    component: () => import("../views/table-slot.vue"),
+  },
+  {
+    path: "/table-slot1",
+    component: () => import("../views/table-slot1.vue"),
+  },
+  {
+    path: "/button",
+    component: () => import("../views/mButton.vue"),
+  },
+  {
+    path: "/tree",
+    component: () => import("../views/tree.vue"),
+  },
 ];
 
 const router = new VueRouter({

@@ -3,6 +3,9 @@
     <div id="nav">
       <ul>
         <li>
+          <router-link to="/button">实战 0: button</router-link>
+        </li>
+        <li>
           <router-link to="/form"
             >实战 1：具有数据校验功能的表单组件 —— Form</router-link
           >
@@ -29,8 +32,19 @@
           >
         </li>
         <li>
+          <router-link to="/table-render1"
+            >实战 6：可用Render和 slot-scope 自定义列的表格组件 ——
+            Table1</router-link
+          >
+        </li>
+        <li>
           <router-link to="/table-slot"
-            >实战 6：可用 slot-scope 自定义列的表格组件 —— Table</router-link
+            >实战 7：可用 slot-scope 自定义列的表格组件 —— Table</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/table-slot1"
+            >实战 8：可用 slot-scope 自定义列的表格组件 —— Table1</router-link
           >
         </li>
         <li>
