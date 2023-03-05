@@ -1,3 +1,3 @@
-module.exports={
-  "endOfLine": "auto"
-}
+module.exports = {
+  // "endOfLine": "auto"
+};
