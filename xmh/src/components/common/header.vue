@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-      <article
+    <article
       class="header-body"
       :style="{
         '--homecolor': homeColor || '#666'
