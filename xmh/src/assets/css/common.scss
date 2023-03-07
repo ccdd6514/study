@@ -1,0 +1,140 @@
+@charset "utf-8";
+/*===== 样式重置 =====*/
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,body,h1,h2,h3,h4,h5,h6,hr,p,iframe,dl,dt,dd,ul,ol,li,pre,form,fieldset,button,input,textarea,th,td{margin:0;padding:0;}
+
+body{background-color:#f5f5f5;}
+
+html,body,.app{margin: 0;padding: 0;height: 100%;width: 100%;max-width: 100% !important;}
+
+body,button,input,select,textarea,fieldset,label{font:16px/1.5 "Microsoft Yahei","Lucida Grande",tahoma,arial,\5b8b\4f53; color:#666;}
+
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+
+ul,ol{list-style:none;}
+
+fieldset,img{border:0 none; padding-inline-start: 0;}
+
+img{-ms-interpolation-mode:bicubic;margin:0;padding:0;border:none;}
+
+i,em{font-style:normal;}
+
+a{text-decoration: none;}
+
+/*===== 浮动布局 =====*/
+.clear,
+.clearfix{zoom:1;}
+.clear:after,
+.clearfix:after{
+  content:' ';
+  display:block;
+  clear:both;
+  height:0;
+  visibility:hidden;
+}
+.fl{float: left}
+.fr{float: right}
+
+/*===== flex布局 =====*/
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  flex: 1;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.justify-center {
+  justify-content: center
+}
+
+.justify-end {
+  justify-content: flex-end
+}
+
+.justify-between {
+  justify-content: space-between
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.content-end {
+  align-content: end;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.middle {
+  align-items: center;
+  justify-content: center
+}
+
+/*===== 通用样式 =====*/
+// body, html {
+//   height: 100%;
+// }
+body {
+  background-color: #F7F8FC;
+  // color: #333;
+}
+
+.page {
+  width: 1190px;
+  margin: 0 auto;
+  padding: 20px 0 70px;
+  min-height: 780px;
+}
+
+// 设置滚动条样式
+::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+  padding: 6px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-clip:padding-box;
+  background-color: #B3B6CA;
+}
+
+::-webkit-scrollbar-track {
+  background-color:#F7F8FC
+}
+
+// ::-webkit-scrollbar-button {
+//   background-color:#F7F8FC;
+// }
+
+::-webkit-scrollbar-corner {
+  background-color: #F7F8FC;
+}
