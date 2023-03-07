@@ -1,19 +1,22 @@
 <template>
   <div class="home">
     <Header />
-    test
+    <div style="height: 500px"></div>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from '@/components/common/header.vue'
+import Header from "@/components/common/header.vue";
+import Footer from "@/components/common/footer.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-    Header
-  }
-}
+    Header,
+    Footer,
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>

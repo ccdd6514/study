@@ -6,7 +6,7 @@
         '--homecolor': homeColor || '#666'
       }"
     >
-         <div :class="['header-logo', homeColor ? 'white' : '']"></div>
+      <div :class="['header-logo', homeColor ? 'white' : '']"></div>
       <ul class="header-list">
         <li v-for="(item, index) in tabs" :key="index" @click="tabClick(index)">
           <router-link
