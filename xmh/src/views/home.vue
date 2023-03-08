@@ -7,16 +7,16 @@
 </template>
 
 <script>
-import Header from "@/components/common/header.vue";
-import Footer from "@/components/common/footer.vue";
+import Header from '@/components/common/header.vue'
+import Footer from '@/components/common/footer.vue'
 
 export default {
-  name: "HomeView",
+  name: 'HomeView',
   components: {
     Header,
-    Footer,
-  },
-};
+    Footer
+  }
+}
 </script>
 
 <style lang="scss" scoped></style>

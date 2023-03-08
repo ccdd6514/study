@@ -7,7 +7,11 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import(/* webpackChunkName: "home" */ '../views/home.vue')
+    component: () => import(/* webpackChunkName: "home" */ '../views/home.vue'),
+    meta: {
+      title: '订单列表',
+      needLogin: true
+    }
   }
 ]
 

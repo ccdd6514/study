@@ -75,12 +75,12 @@
 
 <script>
 export default {
-  name: "Footer",
+  name: 'Footer',
   props: {},
   data() {
-    return {};
-  },
-};
+    return {}
+  }
+}
 </script>
 
 <style lang="scss" scoped>

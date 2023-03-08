@@ -3,7 +3,7 @@
     <article
       class="header-body"
       :style="{
-        '--homecolor': homeColor || '#666'
+        '--homecolor': homeColor || '#666',
       }"
     >
       <div :class="['header-logo', homeColor ? 'white' : '']"></div>
