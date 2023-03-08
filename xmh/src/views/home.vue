@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Header />
-    <div style="height: 500px"></div>
+    <div style="height: 500px">sdfsdsdf</div>
     <Footer />
   </div>
 </template>

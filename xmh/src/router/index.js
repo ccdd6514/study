@@ -9,8 +9,19 @@ const routes = [
     name: 'home',
     component: () => import(/* webpackChunkName: "home" */ '../views/home.vue'),
     meta: {
-      title: '订单列表',
-      needLogin: true
+      title: '首页',
+      publicHeader: false,
+      publicFooter: false
+    }
+  },
+  {
+    path: '/product',
+    name: 'product',
+    component: () => import(/* webpackChunkName: "home" */ '../views/product.vue'),
+    meta: {
+      title: '产品中心',
+      publicHeader: true,
+      publicFooter: true
     }
   }
 ]
@@ -21,4 +32,10 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  next()
+})
 export default router

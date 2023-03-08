@@ -8,7 +8,7 @@
     >
       <div :class="['header-logo', homeColor ? 'white' : '']"></div>
       <ul class="header-list">
-        <li v-for="(item, index) in tabs" :key="index" @click="tabClick(index)">
+        <li v-for="(item, index) in tabs" :key="index">
           <router-link
             :class="[curIndex === index ? 'active' : '']"
             :to="{ path: item.path }"
@@ -37,8 +37,8 @@ export default {
   data() {
     return {
       tabs: [
-        { text: '首页', path: '/' },
-        { text: '产品中心', path: '/product' },
+        { text: '首页', path: '/', name: 'home' },
+        { text: '产品中心', path: '/product', name: 'product' },
         { text: '关于我们', path: '/' },
         { text: '新闻资讯', path: '/' },
         { text: '人才召集', path: '/' }
@@ -46,9 +46,17 @@ export default {
       curIndex: 0
     }
   },
-  methods: {
-    tabClick(index) {
-      this.curIndex = index
+  watch: {
+    $route: {
+      handler: function (to, from) {
+        const name = to.name
+        const index = this.tabs.findIndex(item => {
+          return item.name === name
+        }) || 0
+        this.curIndex = index
+      },
+      deep: true,
+      immediate: true
     }
   }
 }
