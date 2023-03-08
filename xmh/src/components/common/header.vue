@@ -3,7 +3,8 @@
     <article
       class="header-body"
       :style="{
-        '--homecolor': homeColor || '#666',
+        '--homeColor': homeColor || '#666',
+        '--btnColor': btnColor || '#c72929',
       }"
     >
       <div :class="['header-logo', homeColor ? 'white' : '']"></div>
@@ -25,11 +26,11 @@
 export default {
   name: 'Header',
   props: {
-    isAIQ: {
-      type: Boolean,
-      default: false
-    },
     homeColor: {
+      type: String,
+      default: ''
+    },
+    btnColor: {
       type: String,
       default: ''
     }
@@ -39,9 +40,9 @@ export default {
       tabs: [
         { text: '首页', path: '/', name: 'home' },
         { text: '产品中心', path: '/product', name: 'product' },
-        { text: '关于我们', path: '/' },
-        { text: '新闻资讯', path: '/' },
-        { text: '人才召集', path: '/' }
+        { text: '关于我们', path: '/about', name: 'about' },
+        { text: '新闻资讯', path: '/news', name: 'news' },
+        { text: '人才召集', path: '/job', name: 'job' }
       ],
       curIndex: 0
     }
@@ -94,7 +95,7 @@ export default {
     padding: 0 20px;
     line-height: 32px;
     a {
-      color: var(--homecolor);
+      color: #666;
       font-size: 16px;
       font-weight: 500;
       &:hover {
@@ -102,7 +103,7 @@ export default {
       }
     }
     .active {
-      color: red;
+      color: var(--btnColor);
     }
   }
 }

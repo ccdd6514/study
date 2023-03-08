@@ -17,9 +17,39 @@ const routes = [
   {
     path: '/product',
     name: 'product',
-    component: () => import(/* webpackChunkName: "home" */ '../views/product.vue'),
+    component: () => import(/* webpackChunkName: "product" */ '../views/product.vue'),
     meta: {
       title: '产品中心',
+      publicHeader: true,
+      publicFooter: true
+    }
+  },
+  {
+    path: '/news',
+    name: 'news',
+    component: () => import(/* webpackChunkName: "news" */ '../views/news.vue'),
+    meta: {
+      title: '新闻资讯',
+      publicHeader: true,
+      publicFooter: true
+    }
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import(/* webpackChunkName: "about" */ '../views/about.vue'),
+    meta: {
+      title: '关于我们',
+      publicHeader: true,
+      publicFooter: true
+    }
+  },
+  {
+    path: '/job',
+    name: 'job',
+    component: () => import(/* webpackChunkName: "job" */ '../views/job.vue'),
+    meta: {
+      title: '人才召集',
       publicHeader: true,
       publicFooter: true
     }
@@ -29,7 +59,10 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  }
 })
 
 router.beforeEach((to, from, next) => {
