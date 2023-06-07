@@ -1,85 +1,43 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+	<div class="test" ref="myDiv">
+		<!-- block收集节点例子 -->
+		<div>
+			<div>{{ a }}</div>
+			<div>
+				<div>
+					<p>{{ b }}</p>
+				</div>
+			</div>
+		</div>
+		<!-- <div>
+      <h1 v-if="a">{{a}}</h1>
+      <p v-else><h2>{{ b}}</h2></p>
+    </div> -->
+		<!-- <div>
+			<div>
+				<p>{{ b }}</p>
+			</div>
+		</div>
+    <div v-for="(item,index) in arr" :key="index" >{{item}}</div> -->
+	</div>
 </template>
+<script>
+import { getCurrentInstance } from 'vue'
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+export default {
+	data() {
+		return {
+			a: '我是直接子节点a',
+			b: '我是很深的动态子节点b',
+			arr: ['我是第一个', '我是第二个', '我是第三个']
+		}
+	},
+	mounted() {
+		const instance = getCurrentInstance()
+		const vnode = instance.subTree
+		console.log('vnode:', vnode)
+		console.log('dynamicChildren:', vnode.dynamicChildren)
+	},
+	methods: {}
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
+</script>
