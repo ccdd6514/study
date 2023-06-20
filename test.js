@@ -1,7 +1,7 @@
 var a = 5
 
-function test() {
-  a = 0
+function test () {
+  a = 02
   this.a = 23
   console.log(a)
   console.log(this.a)
