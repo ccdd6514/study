@@ -1,30 +1,20 @@
-
-
 <template>
-  <div>
-    {{ a }}
+  <div class="">
+    {{ man }}
   </div>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
+  <button @click="change">修改</button>
 </template>
 
-<script setup lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
+<script setup lang='ts'>
+import { toRef, toRefs, toRaw, reactive } from "vue"
 
-const a:number = 1
+const man = reactive({ name: 'ccdd1', test: 'sdfds' })
 
+
+const change = () => {
+  man.name = 'ccddxiaoyu'
+  console.log(man, toRaw(man))
+}
 </script>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style lang="scss" scoped></style>
