@@ -1,20 +1,18 @@
 <template>
-  <div class="">
-    {{ man }}
-  </div>
-  <button @click="change">修改</button>
+  <Layout></Layout>
 </template>
 
 <script setup lang='ts'>
-import { toRef, toRefs, toRaw, reactive } from "vue"
+import { reactive } from "vue"
+import Layout from './Layout/index.vue'
 
 const man = reactive({ name: 'ccdd1', test: 'sdfds' })
+console.log(man)
 
-
-const change = () => {
-  man.name = 'ccddxiaoyu'
-  console.log(man, toRaw(man))
-}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#app {
+  height: 100%;
+}
+</style>
