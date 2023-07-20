@@ -1,15 +1,22 @@
 <template>
   <!-- <Layout></Layout> -->
-  <waterFall></waterFall>
+  <!-- <waterFall></waterFall> -->
+  <!-- <tsxCom></tsxCom> -->
+  <button @click="flag = !flag">change</button>
+  <div>{{ flag }}</div>
+  <!-- <directive></directive> -->
+  <move></move>
 </template>
 
 <script setup lang='ts'>
-import { reactive } from "vue"
 // import Layout from './Layout/index.vue'
-import waterFall from './components/waterFall/index.vue'
+// import waterFall from './components/waterFall/index.vue'
+// import tsxCom from './App'
+// import directive from './components/directive/index.vue'
+// import auth from './components/directive/auth.vue'
+import move from './components/directive/move.vue'
 
-const man = reactive({ name: 'ccdd1', test: 'sdfds' })
-console.log(man)
+let flag = ref(false)
 
 </script>
 
