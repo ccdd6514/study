@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "sass": "^1.63.6",
+    "v-resize-ccddxy": "^0.0.2",
+    "v-resize-xm": "^0.0.3",
     "vue": "^3.2.47"
   },
   "devDependencies": {
