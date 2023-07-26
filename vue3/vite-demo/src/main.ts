@@ -1,6 +1,10 @@
 import { createApp } from 'vue'
+import './vue3.d.ts'
 // import './style.css'
 import useResize from 'v-resize-ccddxy'
 import App from './App.vue'
 
-createApp(App).use(useResize).mount('#app')
+import loading from './plugin/loading'
+
+
+createApp(App).use(useResize).use(loading).mount('#app')

@@ -21,7 +21,11 @@
 // import lazy from './components/directive/lazy.vue'
 // import useResize from 'v-resize-ccddxy'
 
-// import { onMounted } from 'vue';
+import { getCurrentInstance } from 'vue';
+
+const instance = getCurrentInstance()
+
+// instance?.proxy?.$loading.show()
 
 // onMounted(() => {
 //   useResize(document.querySelector('#resize-box') as HTMLElement, (e: any) => {
@@ -36,6 +40,7 @@ const resizeTest = (e: any) => {
 }
 
 let flag = ref(false)
+
 
 </script>
 
