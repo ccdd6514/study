@@ -16,7 +16,7 @@ app.use('/api', router)
 router.get('/list',async (req:Request, res:Response) => {
   const result = await axios.get('https://c.m.163.com/ug/api/wuhan/app/data/list-total?t=338455922346')
   res.json({
-    data:result.data
+    ...result.data.data
   })
 })
 
