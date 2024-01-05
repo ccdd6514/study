@@ -1,6 +1,6 @@
-(async () => {
-  const { sayHello } = await import("app1/utils");
-  sayHello();
-})();
+;(async () => {
+  const { sayHello } = await import('app1/utils')
+  sayHello()
+})()
 
-console.log("Hello");
+console.log('Hello34')
