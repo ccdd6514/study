@@ -4,7 +4,7 @@ module.exports = defineConfig({
   productionSourceMap: true,
   configureWebpack: (config) => {
     config.mode = 'development'
-    config.devtool = 'eval-source-map'
+    config.devtool = 'source-map'
     // if (process.env.NODE_ENV === 'production') {
     //   // 生产环境配置
     //   config.devtool = 'cheap-source-map';
